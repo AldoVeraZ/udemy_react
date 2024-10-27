@@ -30,7 +30,7 @@ Yo sé que le digo un objeto, pero los arreglos son objetos en JavaScript tambi�
 /* Cuando queramos insertar algo a un arreglo, lo vamos a ser utilizando el operador spread. Ya lo van a ver */
 
 /* En fin, cuando estamos creando este arreglo, yo puedo inicializarlo de una vez, por ejemplo, de esta manera 1,2, 3, 4. Y aquí lo tenemos igual. */
-const arreglo = [1, 2, 3, 4];
+/* const arreglo = [1, 2, 3, 4]; */
 
 /* Voy a crearme un problema similar, como lo vimos en el video anterior de los objetos literales. Voy a hacerme una constante. Definamosla como let porque luego lo vamos a cambiar.
 ya van a ver, ya van ver, se va a llamar arreglo2. Va a ser igual al arreglo. Punto y coma.*/
@@ -52,7 +52,7 @@ Pruebenlo a intentar resolverlo y regreso con ustedes unos segundos.*/
 grabo los cambios y tenemos el resultado esperado. Recuerden, el operador spread es sumamente usado para crear, por decirlo así, copias, pero realmente
 lo que hace es extraer la información de aquí adentro y como estamos creando un nuevo arreglo, y el operador spread
 manda individualmente cada uno de los elementos de ese arreglo*/
-let arreglo2 = [...arreglo, 5];
+/* let arreglo2 = [...arreglo, 5]; */
 
 /* Voy a crearme un nuevo arreglo que va a ser una constante arreglo3 Arreglo 3 que va a ser igual
 Y aquí vamos a tocar un método que es muy usado en React, que es el método map que viene en los arreglos. */
@@ -92,14 +92,77 @@ Está transformando todos los valores de mi arreglo, que son cinco, es este de a
 hola hola. Cinco veces porque tenemos cinco elementos acá. 
 Bien, si yo quiero multiplicar el número por dos, entonces tomaría el número y lo multiplico por dos.
 Punto y coma, grabo los cambios.*/
-const arreglo3 = arreglo2.map(function (numero) {
+
+/* const arreglo3 = arreglo2.map(function (numero) {
   return numero * 2;
-});
+}); */
+
 /* Y ahora tendremos 2, 4, 6, 8 y 10, porque son los valores que tenemos acá.
 Y recuerden, esto crea un nuevo arreglo, por lo cual si yo modificara de alguna manera el arreglo3 
 entonces solo el arreglo3, ese el que se va a cambiar y noten que no estamos modificando los arreglos
 anteriores. */
 
-console.log(arreglo);
+/* console.log(arreglo);
 console.log(arreglo2);
-console.log(arreglo3);
+console.log(arreglo3); */
+
+/* ---------------------Otro Resumen mas ordenado--------------------------- */
+
+// Resumen Conceptual sobre Arreglos en JavaScript
+
+// Definición de Arreglos
+// Un arreglo es una colección de datos almacenados en una sola variable. Se identifica por las llaves cuadradas [],
+// lo que indica que es una estructura de lista.
+// ➡️ Ejemplo: const arreglo = [1, 2, 3]; crea un arreglo con tres elementos.
+
+// Creación de Arreglos y Uso del new Array
+// Aunque se puede crear un arreglo usando new Array(), la sintaxis preferida es utilizando las llaves cuadradas ([]).
+// Se recomienda new Array() solo cuando se necesita definir un tamaño específico para el arreglo.
+// ➡️ Ejemplo: const arreglo = new Array(100); crea un arreglo con 100 posiciones vacías.
+
+/* const arreglo = new Array(100); */
+/* const arreglo = []; */
+
+// Perfectamente. Ustedes pueden clonar esta línea 2, 3, 4 grabo los cambios y una vez que tenemos valores de 1 2 3 4,
+// el primer valor es la posición 0 1 2 3.
+/* arreglo.push(1);
+arreglo.push(2);
+arreglo.push(3);
+arreglo.push(4); */
+
+// Creación de un arreglo literal con valores iniciales
+const arreglo = [1, 2, 3, 4];
+
+// Operador push y Alternativa Spread
+// El operador push permite añadir elementos a un arreglo existente, pero modifica el arreglo original. Como alternativa,
+// es preferible usar el operador spread (...) para evitar modificar el arreglo original.
+// ➡️ Ejemplo: const arreglo2 = [...arreglo, 5]; crea un nuevo arreglo con el contenido de arreglo más el valor 5.
+
+/* let arreglo2 = arreglo; */ // Esto copiaría la referencia de arreglo, no es recomendable usar así
+/* arreglo2.push(5); */ // Esto modifica el arreglo original también, evitemos usarlo así
+
+// Uso del operador spread para crear un nuevo arreglo que incluya un elemento adicional sin modificar el original
+let arreglo2 = [...arreglo, 5];
+
+// Método map para Transformar Arreglos
+// El método map permite aplicar una función a cada elemento de un arreglo y devolver un nuevo arreglo con los resultados.
+// Este método es útil para modificar o transformar datos sin alterar el arreglo original.
+// ➡️ Ejemplo: const arreglo3 = arreglo.map(num => num * 2); multiplica cada valor en arreglo por 2.
+
+const arreglo3 = arreglo2.map(function (numero) {
+  return numero * 2;
+});
+
+// Buenas Prácticas con Arreglos
+// Es recomendable usar métodos funcionales como map y el operador spread (...) para evitar modificar el arreglo original,
+// mejorando la consistencia del código y previniendo errores.
+// ➡️ Ejemplo: Usar const arregloNuevo = [...arreglo, nuevoElemento]; para añadir elementos sin modificar arreglo.
+
+console.log(arreglo); // Muestra el arreglo original
+console.log(arreglo2); // Muestra el arreglo con un nuevo elemento (5) añadido mediante spread
+console.log(arreglo3); // Muestra el arreglo2 con cada elemento multiplicado por 2, sin alterar los anteriores
+
+// Respaldo del Archivo
+// Es recomendable realizar copias de seguridad del código para evitar pérdidas de información. Guardar los archivos en carpetas
+// organizadas permite mantener un registro de los ejercicios y avances.
+// ➡️ Ejemplo: Copiar index.js en la carpeta bases y renombrarlo como 04-arreglos.js.
