@@ -1,2 +1,0 @@
-// Desestructuración
-// Asignación Desestructurante
