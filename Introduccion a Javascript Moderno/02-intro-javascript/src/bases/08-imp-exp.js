@@ -4,9 +4,11 @@
 
 /* import heroes, { owners } from "./data/heroes"; */
 
-import heroes, { owners } from "../data/heroes";
+/* import heroes, { owners } from "../data/heroes";
+ */
+import heroes from "../data/heroes";
 
-console.log(owners);
+/* console.log(owners); */
 
 /* import { heroes } from "./data/heroes"; */
 
@@ -25,15 +27,15 @@ console.log(owners);
   return heroes.find((heroe) => heroe.id === id);
 }; */
 // se puede simplificar aun mas quitando el return y las llaves
-const getHeroeById = (id) => heroes.find((heroe) => heroe.id === id);
+export const getHeroeById = (id) => heroes.find((heroe) => heroe.id === id);
 
-console.log(getHeroeById(2));
+/* console.log(getHeroeById(2)); */
 
 // find ? filter
-const getHeroesByOwner = (owner) =>
+export const getHeroesByOwner = (owner) =>
   heroes.filter((heroe) => heroe.owner === owner);
 
-console.log(getHeroesByOwner("Marvel"));
+/* console.log(getHeroesByOwner("Marvel")); */
 
 // CLASE IMPORT, EXPORT Y FUNCIONES COMUNES DE ARREGLOS (CLASE 21 INTRO A JAVASCRIPT MODERNO)
 // Vamos a importar los héroes desde un archivo heroes.js.
