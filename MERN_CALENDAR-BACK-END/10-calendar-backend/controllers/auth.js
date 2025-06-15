@@ -14,7 +14,7 @@ voy a definirle a la response, que realmente solo con lo que voy a trabajar lo v
  valor por defecto, que será igual a Express Punto Response.
  y desestructuramos de express la response para que no se vea tan largo ; express.response y se vera solo response
  */
-const { express } = require("express");
+const { response } = require("express");
 
 // Importar libreria de hasheo de contraseña
 const bcrypt = require("bcryptjs");

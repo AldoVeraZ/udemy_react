@@ -12,7 +12,7 @@ const UsuarioSchema = Schema({
 
   name: {
     type: String,
-    require: true,
+    required: true,
   },
   /*
   Ahora hagamos el otro campo que sería el e-mail orillero. Llaves El tip también es un string. También va a ser requerido los puntos centro
@@ -21,7 +21,7 @@ const UsuarioSchema = Schema({
   */
   email: {
     type: String,
-    require: true,
+    required: true,
     unique: true,
   },
 
@@ -30,7 +30,7 @@ const UsuarioSchema = Schema({
   */
   password: {
     type: String,
-    require: true,
+    required: true,
   },
 });
 

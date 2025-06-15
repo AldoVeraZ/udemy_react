@@ -1,5 +1,5 @@
 // Un Middleware es casi en un 99 por ciento igual a cualquier controlador de los que tenemos acá, es casi, casi igual.
-// Tiene la respuesta en la responsa tiene todo esto, pero adicionalmente hay una pequeña función adicional
+// Tiene la respuesta en la response tiene todo esto, pero adicionalmente hay una pequeña función adicional
 
 // Nuevamente me gustaría tener el tipado con la respuesta, entonces voy a importarlo.
 // pero como lo que yo necesito es poner el tipado a la response, puedo extraer de ahí de ese paquete la response.

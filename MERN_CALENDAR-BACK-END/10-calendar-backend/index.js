@@ -38,6 +38,7 @@ app.use("/api/auth", require("./routes/auth"));
 //Lo que estoy diciendo acá, es que todo lo que este archivo vaya a exportar lo va a habilitar en esta ruta.
 
 // TODO: CURD: Eventos para actualizar, insertar , poder borrarlos etc, toda la informacion o todos los procedimientos relacionados al manejo de eventos en nuestro calendario
+app.use("/api/events", require("./routes/events"));
 
 // Escuchar peticiones
 app.listen(process.env.PORT, () => {
